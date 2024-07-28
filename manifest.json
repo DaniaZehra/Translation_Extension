@@ -1,0 +1,27 @@
+{
+    "manifest_version":3,
+    "name":"dummy_name",
+    "version":1.0,
+    "description":"dummy_description",
+    "permissions":["activeTab","storage","contextMenus","https://www.google.analytics.com/"],
+    "background":{
+        "scripts":["background.js"],
+        "persistent":false
+    },
+    "popup":{
+        "popup.html":"popup.html",
+        "popup.js":"popup.js"
+    },
+    "icon":{
+        "24":"icon24.png",
+        "48":"icon48.png",
+        "128":"icon128.png"
+    },
+    "content_scripts":[
+        {
+            "matches":["<all_urls>"],
+            "js":["content.js"]
+        }
+    ]
+    
+}
